@@ -19,7 +19,9 @@
 # 
 
 name: OpenWrt-CI
-
+on: 
+  release:
+    types: [published]
 #on:
 #  schedule:
 #    - cron: 0 20 * * *
