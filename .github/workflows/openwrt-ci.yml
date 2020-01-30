@@ -5,9 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
- # push:
- #   branches: 
- #     - master
+
 
 #
 # This is free software, lisence use MIT.
@@ -25,9 +23,9 @@ on:
 #on:
 #  schedule:
 #    - cron: 0 20 * * *
-  push:
-    branches: 
-      - master
+#  push:
+#    branches: 
+#      - master
 jobs:
 
   build:
