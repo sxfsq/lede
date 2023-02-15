@@ -9,9 +9,9 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openssl
 PKG_BASE:=1.1.1
-PKG_BUGFIX:=o
+PKG_BUGFIX:=t
 PKG_VERSION:=$(PKG_BASE)$(PKG_BUGFIX)
-PKG_RELEASE:=$(AUTORELEASE)
+PKG_RELEASE:=1
 PKG_USE_MIPS16:=0
 
 PKG_BUILD_PARALLEL:=1
@@ -27,7 +27,7 @@ PKG_SOURCE_URL:= \
 	ftp://ftp.pca.dfn.de/pub/tools/net/openssl/source/ \
 	ftp://ftp.pca.dfn.de/pub/tools/net/openssl/source/old/$(PKG_BASE)/
 
-PKG_HASH:=9384a2b0570dd80358841464677115df785edb941c71211f75076d72fe6b438f
+PKG_HASH:=8dee9b24bdb1dcbf0c3d1e9b02fb8f6bf22165e807f45adeb7c9677536859d3b
 
 PKG_LICENSE:=OpenSSL
 PKG_LICENSE_FILES:=LICENSE
