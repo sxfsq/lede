@@ -12,9 +12,9 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=$(PROJECT_GIT)/project/rpcd.git
-PKG_MIRROR_HASH:=18137fa6904b1a7aec03a16a4c25fd9b9689b24ee14d431bacdda9f093339071
-PKG_SOURCE_DATE:=2022-09-21
-PKG_SOURCE_VERSION:=8c852b656bf1622dee1ae2cfa4c083f730c1c539
+PKG_MIRROR_HASH:=ec893786c7b1de08a260c791a15a7df471ff95d477ad1a440dc8d8bf63a0be2b
+PKG_SOURCE_DATE:=2024-12-02
+PKG_SOURCE_VERSION:=cc9a471c32e106fa9ee045540613fefdc31c5cd2
 PKG_MAINTAINER:=Jo-Philipp Wich <jo@mein.io>
 
 PKG_LICENSE:=ISC
@@ -68,8 +68,9 @@ endef
 
 
 # 1: plugin name
-# 2: extra dependencies
+# 2: additional dependencies
 # 3: plugin title/description
+# 4: extra dependencies
 define BuildPlugin
 
   PKG_CONFIG_DEPENDS += CONFIG_PACKAGE_rpcd-mod-$(1)
@@ -78,6 +79,7 @@ define BuildPlugin
     $(Package/rpcd/default)
     TITLE+= ($(1) plugin)
     DEPENDS+=rpcd $(2)
+    EXTRA_DEPENDS:=$(4)
   endef
 
   define Package/rpcd-mod-$(1)/description
